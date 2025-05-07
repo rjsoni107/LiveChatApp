@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 // MongoDB Connection
 mongoose.connect(`${MONGO_SERVER}${DB_NAME}`, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("MongoDB connected!"))
+  .then(() => console.log(`MongoDB connected! ${MONGO_SERVER}${DB_NAME}`))
   .catch(err => console.log("MongoDB connection error:", err));
 
 module.exports = app;
